@@ -1,0 +1,70 @@
+# Although, CMake will select a generator, if not specified.
+# You may specify a generator when building your project.
+# Use CMake --help to see available generator options, such as
+# UnixMakefiles, Ninja, and more.
+
+cmake -G <generator> -S <src> -B <build>
+
+# Visual Studio support a more in-depth specification of a toolset.
+# CMake will scan environment variables that override the defaults: 
+# CMAKE_GENERATOR_TOOLSET and CMAKE_GENERATOR_PLATFORM. Alternatively, 
+# the values can be specified directly in the command line: 
+
+cmake -G <generator>
+      -T <toolset>
+      -A <platform>
+      -S <src> -B <build>
+
+# Here is an example command..
+
+cmake \                        <<<Backslash allows multi-line
+  -G "Visual Studio 17 2022" \
+  -T ClangCL \
+  -A x64 \
+  -S . \
+  -B build
+
+# To check which generators are available on your system
+
+cmake --help
+
+# In general, the output will look like this..
+
+Visual Studio 17 2022       
+Visual Studio 16 2019       
+Visual Studio 15 2017 [arch]
+Visual Studio 14 2015 [arch]
+Visual Studio 12 2013 [arch]
+Visual Studio 11 2012 [arch]
+Visual Studio 9 2008 [arch] 
+Borland Makefiles           
+NMake Makefiles             
+NMake Makefiles JOM         
+MSYS Makefiles              
+MinGW Makefiles             
+Green Hills MULTI           
+Unix Makefiles              
+Ninja                       
+Ninja Multi-Config          
+Watcom WMake                
+CodeBlocks - MinGW Makefiles
+CodeBlocks - NMake Makefiles
+CodeBlocks - NMake Makefiles JOM
+CodeBlocks - Ninja          
+CodeBlocks - Unix Makefiles 
+CodeLite - MinGW Makefiles  
+CodeLite - NMake Makefiles  
+CodeLite - Ninja            
+CodeLite - Unix Makefiles   
+Eclipse CDT4 - NMake Makefiles
+Eclipse CDT4 - MinGW Makefiles
+Eclipse CDT4 - Ninja        
+Eclipse CDT4 - Unix Makefiles
+Kate - MinGW Makefiles      
+Kate - NMake Makefiles      
+Kate - Ninja                
+Kate - Unix Makefiles       
+Sublime Text 2 - MinGW Makefiles
+Sublime Text 2 - NMake Makefiles
+Sublime Text 2 - Ninja      
+Sublime Text 2 - Unix Makefiles
