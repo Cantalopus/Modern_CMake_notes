@@ -1,10 +1,10 @@
 # For general info on variable, macros, and settings run..
 
-cmake --system-information [file]
+>cmake --system-information [file]
 
 # CMake uses the `message()` to report details of the build process
 
-cmake --log-level=<level>
+>cmake --log-level=<level>
 
 ERROR
   └─ WARNING
@@ -28,16 +28,16 @@ message(TRACE   "TRACE message")
 add_executable(${PROJECT_NAME}...)
 #############################################################
 
-cmake --log-level=STATUS -S <src> -B <build>
+>cmake --log-level=STATUS -S <src> -B <build>
 
 # will return 'STATUS message'
 
-cmake --log-level=VERBOSE -S <src> -B <build>
+>cmake --log-level=VERBOSE -S <src> -B <build>
 
 # will return 'STATUS message'
 #             'VERBOSE message'
 
-cmake --log-level=DEBUG -S <src> -B <build>
+>cmake --log-level=DEBUG -S <src> -B <build>
 
 # will return 'STATUS message'
 #             'VERBOSE message'
@@ -45,11 +45,11 @@ cmake --log-level=DEBUG -S <src> -B <build>
 
 # and..
 
-cmake --log-context <src>
+>cmake --log-context <src>
 
 # will relist the logged infor, for example.. 
 
-cmake --log-level=DEBUG --log-context <src>
+>cmake --log-level=DEBUG --log-context <src>
 
 # will produce the output.. 
 
@@ -62,4 +62,4 @@ cmake --log-level=DEBUG --log-context <src>
 
 # This next command will print out every single thing executed when building
 
-cmake --trace
+>cmake --trace

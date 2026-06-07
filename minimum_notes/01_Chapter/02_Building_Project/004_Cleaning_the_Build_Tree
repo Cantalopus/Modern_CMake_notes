@@ -1,10 +1,10 @@
 # This command removes all build artifacts from the build tree..
 
-cmake --build <build> --target clean
+>cmake --build <build> --target clean
 
 # Or.. 
 
-cmake --build build-LH -t clean
+>cmake --build build-LH -t clean
 
 # This, basically, deletes the .o, .d, and other similar files
 # that were created during the build.
@@ -12,8 +12,8 @@ cmake --build build-LH -t clean
 # This command is different, as it first removes build artifacts
 # then builds targets, which regenerate the build artifacts..
 
-cmake --build <build> --clean-first
+>cmake --build <build> --clean-first
 
 # For example.. 
 
-cmake --build build-clang --clean-first
+>cmake --build build-clang --clean-first

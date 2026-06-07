@@ -1,16 +1,16 @@
 # When ever we nee to 'look under the hood', during the build process
 # we have the option to do so with commands like..
 
-cmake --build <build> --verbose
+>cmake --build <build> --verbose
 
 # Or simply..
 
-cmake --build <build> -v
+>cmake --build <build> -v
 
 # The same thing can be achieved by setting the cached variable..
 
-cmake -DCMAKE_VERBOSE_MAKEFILE=1 -B <build>
-cmake --build <build>
+>cmake -DCMAKE_VERBOSE_MAKEFILE=1 -B <build>
+>cmake --build <build>
 
 # Or, in the CMakeLists.txt.. 
 

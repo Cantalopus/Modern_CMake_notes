@@ -1,10 +1,10 @@
 # You can single out a target from CMakeLists.txt while building with..
 
-cmake --build <build> --target <target>
+>cmake --build <build> --target <target>
 
 # For example..
 
-cmake --build build-LH --target test
+>cmake --build build-LH --target test
 
 # So, in CMakeLists.txt say we have.. 
 
@@ -33,8 +33,8 @@ target_include_directories(test PRIVATE include)
 # The command will only build the target add_executable(test...)
 # You can also specify multiple targets using..
 
-cmake --build build-LH -t tokenizer -t test
+>cmake --build build-LH -t tokenizer -t test
 
 # Or..
 
-cmake --build build-LH --target tokenizer --target test
+>cmake --build build-LH --target tokenizer --target test

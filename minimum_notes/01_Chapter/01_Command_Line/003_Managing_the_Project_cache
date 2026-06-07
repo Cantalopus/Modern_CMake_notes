@@ -3,22 +3,22 @@
 
 # You're able to prepopulate cached variables a script file, with -C..
 
-cmake -C <initial cache script> -S <src> -B <build>
+>cmake -C <initial cache script> -S <src> -B <build>
 
 # You can directly set CMakeCache.txt variables using the command -D(Define), in the cmd #line.
 
 # i.e..
 
-cmake -D <initial cache script> -S <src> -B <build>
-#     ^Define                   ^Source  ^Build
+>cmake -D <initial cache script> -S <src> -B <build>
+#      ^Define                   ^Source  ^Build
 
 # Example
 
-cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=FALSE -S . -B build-cmake
+>cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=FALSE -S . -B build-cmake
 
 # IRL example(important)
 
-cmake -D CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON -B build-cmake
+>cmake -D CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON -B build-cmake
 
 # This particular command is important because the clangd language-server
 # can read this to provide proper error correction symbols for vscode. The
@@ -26,7 +26,7 @@ cmake -D CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON -B build-cmake
 # compiler commands. So, we have the .json file under build-cmake/ so, we 
 # create a symbolic-link to that file and place it in our root folder, with
 
-ln -s build-cmake/compile_commands.json compile_commands.json
+>ln -s build-cmake/compile_commands.json compile_commands.json
 
 # then, with the ls command, we get..
 
@@ -34,14 +34,14 @@ compile_commands.json --> build-cmake/compile_commands.json
 
 # You can list variables with the -L option, and print more info with -A,-H
 
-cmake -L -S <src> -B <build>
-      ^LIST
-cmake -LH -S <src> -B <build>
-      ^ HELP  
-cmake -LAH -S <src> -B <build>
-      ^ ADVANCED
+>cmake -L -S <src> -B <build>
+       ^LIST
+>cmake -LH -S <src> -B <build>
+       ^ HELP  
+>cmake -LAH -S <src> -B <build>
+       ^ ADVANCED
 
 # Use globbing wiht -U
 
-cmake -U <globbing_expr> -S <src> -B <build>
-      ^UNIVERSAL
+>cmake -U <globbing_expr> -S <src> -B <build>
+       ^UNIVERSAL

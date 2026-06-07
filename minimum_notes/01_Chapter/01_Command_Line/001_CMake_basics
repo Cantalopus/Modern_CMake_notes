@@ -6,7 +6,7 @@ add_executable(Hello hello.cpp)
 
 # After creating the CMakeLists.txt, from the command line run..
 
-cmake -B <build>
+>cmake -B <build>
 
 # You should see an output like this..
 
@@ -29,7 +29,7 @@ cmake -B <build>
 
 # Then, to build.. 
 
-cmake --build <build>
+>cmake --build <build>
 
 # output should be..
 
@@ -41,6 +41,6 @@ Scanning dependencies of target Hello
 
 #Generating a project buildsystem, commands may look like either of these 3 commands..
 
-cmake [<options>] -S <src> -B <build>   <<<Best option(ecplict)
-cmake [<options>] <src>                 <<<The next 2 will produce in-source builds(messy)
-cmake [<options>] <build>               <<<UNLESS you have alreay built!!! Use this one
+>cmake [<options>] -S <src> -B <build>   <<<Best option(ecplict)
+>cmake [<options>] <src>                 <<<The next 2 will produce in-source builds(messy)
+>cmake [<options>] <build>               <<<UNLESS you have alreay built!!! Use this one

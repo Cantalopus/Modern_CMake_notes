@@ -3,8 +3,8 @@
 
 # List avialable presets..
 
-`cmake --list-presets`
+>cmake --list-presets
 
 # use available presets with.. 
 
-`cmake --preset=<preset> -S <src> -B <build>
+>cmake --preset=<preset> -S <src> -B <build>

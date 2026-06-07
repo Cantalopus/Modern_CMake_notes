@@ -1,28 +1,28 @@
 # Building from a project from the command line..
 
-cmake --build <build> [<options>] [-- <build-tool-options>]
+>cmake --build <build> [<options>] [-- <build-tool-options>]
 
 # In most cases the project can be build by simply using the command..
 
-cmake --build <build>
+>cmake --build <build>
 
 # if you need to provide special arguments, pass the after the -- token..
 
-cmake --build <build> -- <build-tool-option>
+>cmake --build <build> -- <build-tool-option>
 
 # An real world example of this would be..
 
-cmake --build build-debug -- -j8
+>cmake --build build-debug -- -j8
 
 # This tells CMake to build from the project files in the build-debug 
 # directory on 8 CPU cores. Another one is..
 
-cmake --build build-debug -- VERBOSE=1
+>cmake --build build-debug -- VERBOSE=1
 
 # This will have verbose output during the build process. 
 # You can also combined arguments, like..
 
-cmake --build build-debug -- -j4 VERBOSE=1
+>cmake --build build-debug -- -j4 VERBOSE=1
 
 # This means the task will be accomplished running parallel and
 # print the output of each completed task.

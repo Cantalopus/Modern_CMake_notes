@@ -3,30 +3,30 @@
 # Use CMake --help to see available generator options, such as
 # UnixMakefiles, Ninja, and more.
 
-cmake -G <generator> -S <src> -B <build>
+>cmake -G <generator> -S <src> -B <build>
 
 # Visual Studio support a more in-depth specification of a toolset.
 # CMake will scan environment variables that override the defaults: 
 # CMAKE_GENERATOR_TOOLSET and CMAKE_GENERATOR_PLATFORM. Alternatively, 
 # the values can be specified directly in the command line: 
 
-cmake -G <generator>
+>cmake -G <generator>
       -T <toolset>
       -A <platform>
       -S <src> -B <build>
 
 # Here is an example command..
 
-cmake \                        <<<Backslash allows multi-line
-  -G "Visual Studio 17 2022" \
-  -T ClangCL \
-  -A x64 \
-  -S . \
-  -B build
+>cmake \                        <<<Backslash allows multi-line
+    -G "Visual Studio 17 2022" \
+    -T ClangCL \
+    -A x64 \
+    -S . \
+    -B build
 
 # To check which generators are available on your system
 
-cmake --help
+>cmake --help
 
 # In general, the output will look like this..
 
