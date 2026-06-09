@@ -1,3 +1,6 @@
+|    Configure    |    Generate    |    Build    |    Install    |
+| --------------: | :------------: | :---------: | ------------: |
+
 ## Bare minimum for a CMakeLists.txt
 
 ```cmake
@@ -6,10 +9,10 @@ project(Hello)
 add_executable(Hello hello.cpp)
 ``` 
 
-## After creating the CMakeLists.txt, from the command line run..
+## This configures and generate build files from src into build DIR
 
 ```bash
-cmake -B <build>
+cmake -S <src> -B <build>
 ```
 
 ## You should see an output like this..
@@ -33,7 +36,7 @@ cmake -B <build>
 -- Build files have been written to: /root/build_tree
 ```  
 
-## Then, to build.. 
+## Then, to build your binary.. 
 
 ```bash
 cmake --build <build>
@@ -51,9 +54,11 @@ Scanning dependencies of target Hello
 
 ## Generating a project buildsystem, commands may look like either of these 3 commands..
 
+## (Ideal)Configures src file in build directory
 ```bash
 cmake [<options>] -S <src> -B <build>
 ```
+## (Not Ideal) Will produce an insource build
 ```bash
 cmake [<options>] <src>
 ```

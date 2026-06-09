@@ -1,35 +1,46 @@
-# Although, CMake will select a generator, if not specified.
-# You may specify a generator when building your project.
-# Use CMake --help to see available generator options, such as
-# UnixMakefiles, Ninja, and more.
+## Selecting a generator...
+Although, CMake will select a generator, if not specified.
+You may specify a generator when building your project.
+Use CMake --help to see available generator options, such as
+UnixMakefiles, Ninja, and more.
 
->cmake -G <generator> -S <src> -B <build>
+```bash
+cmake -G <generator> -S <src> -B <build>
+```
 
-# Visual Studio support a more in-depth specification of a toolset.
-# CMake will scan environment variables that override the defaults: 
-# CMAKE_GENERATOR_TOOLSET and CMAKE_GENERATOR_PLATFORM. Alternatively, 
-# the values can be specified directly in the command line: 
+## Other options available...
+Visual Studio support a more in-depth specification of a toolset.
+CMake will scan environment variables that override the defaults: 
+CMAKE_GENERATOR_TOOLSET and CMAKE_GENERATOR_PLATFORM. Alternatively, 
+the values can be specified directly in the command line: 
 
->cmake -G <generator>
+```bash
+cmake -G <generator>
       -T <toolset>
       -A <platform>
       -S <src> -B <build>
+```
 
-# Here is an example command..
+## Here is an example command..
 
->cmake \                        <<<Backslash allows multi-line
+```bash
+cmake \                        
     -G "Visual Studio 17 2022" \
     -T ClangCL \
     -A x64 \
     -S . \
     -B build
+```
 
-# To check which generators are available on your system
+## To check which generators are available on your system
 
->cmake --help
+```bash
+cmake --help
+```
 
-# In general, the output will look like this..
+## In general, the output will look like this..
 
+```bash
 Visual Studio 17 2022       
 Visual Studio 16 2019       
 Visual Studio 15 2017 [arch]
@@ -68,3 +79,4 @@ Sublime Text 2 - MinGW Makefiles
 Sublime Text 2 - NMake Makefiles
 Sublime Text 2 - Ninja      
 Sublime Text 2 - Unix Makefiles
+```
