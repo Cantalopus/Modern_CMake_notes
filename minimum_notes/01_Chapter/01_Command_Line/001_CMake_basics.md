@@ -1,17 +1,22 @@
-# Bare minimum for a CMakeLists.txt
+## Bare minimum for a CMakeLists.txt
 
+```cmake
 cmake_minimum_required(VERSION 3.15)
 project(Hello)
-add_executable(Hello hello.cpp) 
+add_executable(Hello hello.cpp)
+``` 
 
-# After creating the CMakeLists.txt, from the command line run..
+## After creating the CMakeLists.txt, from the command line run..
 
->cmake -B <build>
+```bash
+cmake -B <build>
+```
 
-# You should see an output like this..
+## You should see an output like this..
 
+```bash
 /examples/ch01/01-hello# cmake -B ~/build_tree
--- The C compiler identification is GNU 11.3.0   <<<Notice finds both C and CXX compilers
+-- The C compiler identification is GNU 11.3.0
 -- The CXX compiler identification is GNU 11.3.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
@@ -25,22 +30,33 @@ add_executable(Hello hello.cpp)
 -- Detecting CXX compile features - done
 -- Configuring done (1.0s)
 -- Generating done (0.1s)
--- Build files have been written to: /root/build_tree  <<<Files are written here
+-- Build files have been written to: /root/build_tree
+```  
 
-# Then, to build.. 
+## Then, to build.. 
 
->cmake --build <build>
+```bash
+cmake --build <build>
+```
 
-# output should be..
+## output should be..
 
+```bash
 /examples/ch01/01-hello# cmake --build ~/build_tree
 Scanning dependencies of target Hello
 [ 50%] Building CXX object CMakeFiles/Hello.dir/hello.cpp.o
 [100%] Linking CXX executable Hello
-[100%] Built target Hello  
+[100%] Built target Hello 
+``` 
 
-#Generating a project buildsystem, commands may look like either of these 3 commands..
+## Generating a project buildsystem, commands may look like either of these 3 commands..
 
->cmake [<options>] -S <src> -B <build>   <<<Best option(ecplict)
->cmake [<options>] <src>                 <<<The next 2 will produce in-source builds(messy)
->cmake [<options>] <build>               <<<UNLESS you have alreay built!!! Use this one
+```bash
+cmake [<options>] -S <src> -B <build>
+```
+```bash
+cmake [<options>] <src>
+```
+```bash
+cmake [<options>] <build>
+```
