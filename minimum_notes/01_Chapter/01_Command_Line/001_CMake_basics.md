@@ -54,11 +54,11 @@ Scanning dependencies of target Hello
 
 ## Generating a project buildsystem, commands may look like either of these 3 commands..
 
-## (Ideal)Configures src file in build directory
+#### (Ideal)Configures src file in build directory
 ```bash
 cmake [<options>] -S <src> -B <build>
 ```
-## (Not Ideal) Will produce an insource build
+#### (Not Ideal) Will produce an insource build
 ```bash
 cmake [<options>] <src>
 ```
