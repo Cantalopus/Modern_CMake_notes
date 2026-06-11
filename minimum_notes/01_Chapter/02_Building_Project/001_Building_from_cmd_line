@@ -1,4 +1,4 @@
-## Building from a project from the command line..
+# Building from a project from the command line..
 
 ```bash
 cmake --build <build> [<options>] [-- <build-tool-options>]
@@ -29,11 +29,11 @@ directory on 8 CPU cores. Another one is..
 ```bash
 cmake --build build-debug -- VERBOSE=1
 ```
+This will have verbose output during the build process. 
+You can also combined arguments, like..
 
-# This will have verbose output during the build process. 
-# You can also combined arguments, like..
-
->cmake --build build-debug -- -j4 VERBOSE=1
-
-# This means the task will be accomplished running parallel and
-# print the output of each completed task.
+```bash
+cmake --build build-debug -- -j4 VERBOSE=1
+```
+This means the task will be accomplished running parallel and
+print the output of each completed task.

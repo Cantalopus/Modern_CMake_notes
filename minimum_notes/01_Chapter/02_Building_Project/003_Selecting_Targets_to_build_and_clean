@@ -1,14 +1,18 @@
 # You can single out a target from CMakeLists.txt while building with..
 
->cmake --build <build> --target <target>
+```bash
+cmake --build <build> --target <target>
+```
 
 # For example..
 
->cmake --build build-LH --target test
+```bash
+cmake --build build-LH --target test
+```
 
 # So, in CMakeLists.txt say we have.. 
 
-####################################################################
+```cmake
 cmake_minimum_required(VERSION 3.31)
 project(tokenizer LANGUAGES CXX)
 add_executable(${PROJECT_NAME}
@@ -28,13 +32,16 @@ add_executable(test
 )
 
 target_include_directories(test PRIVATE include)
-####################################################################
+```
 
-# The command will only build the target add_executable(test...)
-# You can also specify multiple targets using..
+# Target add_executable(test)..
 
->cmake --build build-LH -t tokenizer -t test
+```bash
+cmake --build build-LH -t tokenizer -t test
+```
 
 # Or..
 
->cmake --build build-LH --target tokenizer --target test
+```bash
+cmake --build build-LH --target tokenizer --target test
+```

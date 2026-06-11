@@ -1,24 +1,31 @@
-# There ar single config generators and multi-config generators
-# like, `Visual Studio`, `Xcode`, and `Ninja Multi-Config`. These
-# generators can store multiple build types in the same build-tree
+# Multi-configuration generators
+There ar single config generators and multi-config generators
+like, `Visual Studio`, `Xcode`, and `Ninja Multi-Config`. These
+generators can store multiple build types in the same build-tree
 
-# Configur once..
+## Configur once..
 
->cmake -G "Ninja Multi-Config" -S . -B build-multi-nin
+```bash
+cmake -G "Ninja Multi-Config" -S . -B build-multi-nin
+```
 
-# Now the build directory contains information for:
+## Now the build directory contains information for:
+```bash
     `Debug`
     `Release`
     `RelWithDebInfo`
     `MinSizeRel`
+```
 
-# Now you tell CMake which configuration you want when you build..
+## Tell CMake which configuration you want when you build..
 
->cmake --build build-multi-nin --config Debug
+```bash
+cmake --build build-multi-nin --config Debug
+```
 
-# Or..
+## Or..
 
->cmake --build build-multi-nin --config Release
-
-# Same build-tree
-# Different configuration.
+```bash
+cmake --build build-multi-nin --config Release
+```
+Same build-tree, different configuration.
