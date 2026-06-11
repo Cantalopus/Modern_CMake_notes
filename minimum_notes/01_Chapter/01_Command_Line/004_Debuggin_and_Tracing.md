@@ -1,21 +1,26 @@
-# For general info on variable, macros, and settings run..
+## For general info on variable, macros, and settings run..
 
->cmake --system-information [file]
+```bash
+cmake --system-information [file]
+```
 
-# CMake uses the `message()` to report details of the build process
+## CMake uses the `message()` to report details of the build process
 
->cmake --log-level=<level>
+```bash
+cmake --log-level=<level>
+```
 
-ERROR
-  └─ WARNING
-       └─ NOTICE
-            └─ STATUS
-                 └─ VERBOSE
-                      └─ DEBUG
-                           └─ TRACE
+>                                                       TRACE
+>>                                              DEBUG
+>>>                                     VERBOSE
+>>>>                            STATUS
+>>>>>                   NOTICE
+>>>>>>          WARNING
+>>>>>>> ERROR
+  
+## for example, the `message()` placed in CMakeLists.txt
 
-# for example, the `message()` placed in CMakeLists.txt
-#############################################################
+```cmake
 cmake_minimum_required(VERSION 3.20)
 
 project(tokenizer LANGUAGES CXX)
@@ -26,40 +31,68 @@ message(DEBUG   "DEBUG message")
 message(TRACE   "TRACE message")
 
 add_executable(${PROJECT_NAME}...)
-#############################################################
+```
 
->cmake --log-level=STATUS -S <src> -B <build>
+## Set `--log-level=STATUS`... 
 
-# will return 'STATUS message'
+```bash
+cmake --log-level=STATUS -S <src> -B <build>
+```
 
->cmake --log-level=VERBOSE -S <src> -B <build>
+## will return... 
 
-# will return 'STATUS message'
-#             'VERBOSE message'
+```bash
+'STATUS message'
+```
 
->cmake --log-level=DEBUG -S <src> -B <build>
+## Setting `--log-level=VERBOSE`...
 
-# will return 'STATUS message'
-#             'VERBOSE message'
-#             'DEBUG message'
+```bash
+cmake --log-level=VERBOSE -S <src> -B <build>
+```
 
-# and..
+## will return... 
 
->cmake --log-context <src>
+```bash
+'STATUS message'
+'VERBOSE message'
+```
 
-# will relist the logged infor, for example.. 
+```bash
+cmake --log-level=DEBUG -S <src> -B <build>
+```
 
->cmake --log-level=DEBUG --log-context <src>
+# will return...
 
-# will produce the output.. 
+```bash
+'STATUS message'
+'VERBOSE message'
+'DEBUG message'
+```
 
+## and..
+
+cmake --log-context <src>
+
+# will relist the logged info, for example.. 
+
+```bash
+cmake --log-level=DEBUG --log-context <src>
+```
+
+## will produce the output.. 
+
+```bash
 -- STATUS message
 -- VERBOSE message
 -- DEBUG message
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/capts/remote_repos/cloned/remote_projects/tokenizer
+```
 
-# This next command will print out every single thing executed when building
+## This next command will print out every single thing executed when building
 
->cmake --trace
+```bash
+cmake --trace
+```
