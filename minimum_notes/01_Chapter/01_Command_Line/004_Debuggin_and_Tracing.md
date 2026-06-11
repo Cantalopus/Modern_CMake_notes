@@ -58,6 +58,8 @@ cmake --log-level=VERBOSE -S <src> -B <build>
 'VERBOSE message'
 ```
 
+## Setting `--log-level=DEBUG`...
+
 ```bash
 cmake --log-level=DEBUG -S <src> -B <build>
 ```
@@ -72,9 +74,24 @@ cmake --log-level=DEBUG -S <src> -B <build>
 
 ## and..
 
+```bash
 cmake --log-context <src>
+```
 
 # will relist the logged info, for example.. 
+
+```bash
+capts@Bob-Standby-PC:~/remote_repos/cloned/remote_projects/tokenizer$ cmake --log-context .
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (2.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/capts/remote_repos/cloned/remote_projects/tokenizer
+```
 
 ```bash
 cmake --log-level=DEBUG --log-context <src>
