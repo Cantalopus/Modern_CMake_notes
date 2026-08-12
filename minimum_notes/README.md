@@ -17,4 +17,4 @@
 - 1.2.7_Installing_a_Project
 # 2.  02_Chapter
 ###    1. CMake Language Syntax
-####        - 2.1.1_CMake_syntax
+- 2.1.1_CMake_syntax
