@@ -1,1 +1,10 @@
-system_info.txt
+####BUILD FILES####
+#  Using /build/ restricts what is 
+#  actually being ignored to a build 
+#  directory at the repository root.
+
+build/ 
+
+####MISCELLANEOUS FILES####
+
+system_info.txt 
