@@ -30,3 +30,14 @@
 - CMakeLists.txt
 ### 04_Cache_Variables
 - 2.4.1_Using_Cache_Variables.md
+### 05_Scope
+- 2.5.1_Using_Variable_Scope.md
+- scope_2.cmake
+- scope.cmake
+### 06_Lists
+- list_commands
+- 2.6.1_Using_Lists.md
+- list.cmake
+### 07_Control_Structure
+- 2.7.1_Understanding_Control_Structure.md
+- 2.7.2_Comparing_Values.md
