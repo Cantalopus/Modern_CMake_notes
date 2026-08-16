@@ -42,4 +42,7 @@
 - 2.7.1_Understanding_Control_Structure.md
 - 2.7.2_Comparing_Values.md
 - 2.7.3_Loops.md
+- 2.7.4_Command_Definition.md
+- function.cmake
+- macro.cmake
 - foreach.cmake
