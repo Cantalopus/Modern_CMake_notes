@@ -41,3 +41,5 @@
 ### 07_Control_Structure
 - 2.7.1_Understanding_Control_Structure.md
 - 2.7.2_Comparing_Values.md
+- 2.7.3_Loops.md
+- foreach.cmake
