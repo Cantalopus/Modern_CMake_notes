@@ -35,7 +35,7 @@
 - scope_2.cmake
 - scope.cmake
 ### 06_Lists
-- list_commands
+- list_commands/
 - 2.6.1_Using_Lists.md
 - list.cmake
 ### 07_Control_Structure
@@ -46,3 +46,7 @@
 - function.cmake
 - macro.cmake
 - foreach.cmake
+## 08_Frequently_Used_Commands
+- 2.8.1_Exploring_the_Frequently_used_Commands.md
+- message_context.cmake
+- message_error.cmake
