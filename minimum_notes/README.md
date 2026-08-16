@@ -45,5 +45,8 @@
 - foreach.cmake
 ### 05_Frequently_Used_Commands
 - 2.5.1_Exploring_the_Frequently_used_Commands.md
+- build.sh
+- CMakeLists.txt
+- helpers.cmake
 - message_context.cmake
 - message_error.cmake
