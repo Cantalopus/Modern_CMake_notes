@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.26)
 project(Rental CXX)
+include(cars/cars.cmake)
 add_executable(Rental
                main.cpp
-               cars/car.cpp
+               ${sources}
                # more files in the other directories
 )

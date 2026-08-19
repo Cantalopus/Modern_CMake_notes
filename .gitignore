@@ -9,3 +9,4 @@ build/
 
 system_info.txt 
 *_*_sandbox/
+compile_commands.json
