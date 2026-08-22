@@ -12,5 +12,8 @@ int main() {
     ClassB class_b;
     std::cout<<class_b.method()<<std::endl;
 
+    Lib1 lib1;
+    std::cout<<lib1.method()<<std::endl;
+
     return 0;
 }
