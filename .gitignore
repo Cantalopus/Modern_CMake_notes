@@ -9,4 +9,17 @@ build/
 
 system_info.txt 
 *_*_sandbox/
-compile_commands.json
+compile_commands.json  
+  
+# CMake-generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+CTestTestfile.cmake
+compile_commands.json  
+  
+# CMake Graphviz output
+*.dot
+*.dot.*
