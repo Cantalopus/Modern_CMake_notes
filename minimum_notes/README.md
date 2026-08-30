@@ -86,3 +86,8 @@
 - 4.5.1_in_source
 - 4.5.1_Configuring_the_Toolchain.md
 # 05_Chapter
+### 01_Targets
+- 01-Visualizing_dependencies
+- 5.1.1_understanding_the_concept_of_a_target.md
+- 5.1.2_Setting_Properties_of_Targets.md
+- 5.1.3_Transitive_Usage_Requirments
